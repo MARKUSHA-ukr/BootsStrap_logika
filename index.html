@@ -8,17 +8,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary fw-bold" href="#">Cyber-VR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Особливості</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <header class="vh-100 bg-dark text-white d-flex flex-column justify-content-center align-items-center">
 
     <h1 class ="text-upperace.mb-3">Cyber-VR 2077</h1>
 
     <p class="fs-4 mb-4">Занурся у нову реальність вже сьогодні</p>
 
-    <button class="btn btn-primary btn-lg btn-neon">Грати зараз</button>
+    <button class="btn btn-primary btn-lg btn-neon" data-bs-toggle="modal" data-bs-target="#downloadModal">Грати зараз</button>
 
 </header>
 <section class="container my-5">
-    <h1 class="text-center mb-4">Особливості гри</h1>
+    <h1 class="text-center mb-4" >Особливості гри</h1>
     <div class="d-flex justify-content-center gap-4 flex-wrap">
         <div class="card p-3 text-center shadow" style="max-width: 18rem;">
                 <img src="card_1.png" alt="">
@@ -46,6 +62,63 @@
           </div>
     </div>
 </section>
+<section class="container my-5" style="max-width: 800px;">
+  <h2 class="text-center mb-4"><div class="accordion  accordion-flush" id="accordionFAQ">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Які системні вимоги?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          Потрібен ПК з відеокартою від RTX 3060 та будь-який сучасний VR-шолом.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Чи є гра українською?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+          Так, доступна повна текстова та голосова локалізація!
+        </div>
+      </div>
+    </div>
+  </div>
+  </h2>
+</section>
 
+<div class="modal fade" id="downloadModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Отримати посилання на гру</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Залиште свої дані, і ми надішлемо вам унікальне посилання для завантаження!</p>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Ваше ім'я</label>
+            <input type="text" class="form-control" placeholder="Наприклад: Олексій">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email адреса</label>
+            <input type="email" class="form-control" placeholder="name@example.com">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Отримати гру</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
